@@ -57,9 +57,19 @@ ANCHOR SECTION 1
    justify-content: space-between;
 }
 
+.section1 .menuimg {
+   width: 50px;
+ }
+
 .left-menu {
    display: flex;
    align-items: center;
+}
+
+.left-content {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
 }
 
 .right-menu {

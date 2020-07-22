@@ -1,19 +1,76 @@
-@media (max-width: 1024px) {
-    .s2-content img {
-      width: 300px;
-    }
+/*ANCHOR MENU HAMBURGUER*/
 
-    .section3 {
-      height: 100%;
-    }
+.btn-menu {
 
-    .s3-content {
-      padding: 20px 0px 20px;
-      flex-direction: column;
-      text-align: center;
-    }
+  /* padding: 10px 20px; */
+  text-align: right;
+  box-sizing: border-box;
+  display: none;
+}
 
-    .s3-img-container {
+@media (max-width: 1023px) {
+
+  /*MENU MOBILE BUTTON */
+
+  .section1 .btn-menu {
+    display: block;
+  }
+
+  .section1 .left-menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .section1 .right-menu {
+    display: none;
+  }
+
+  .section1 .right-menu a {
+    padding-right: 0px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 2.1rem;
+    border-bottom-width: 1px;
+    border-bottom-color: #000;
+    border-bottom-style: solid;
+  }
+
+  .section1 .right-menu a:first-child {
+    padding-top: 20px;   
+  }
+    
+  .section1 .header-menu {
+    align-items: initial;
+    flex-direction: row;
+  }
+
+  .section1 .right-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* NORMAL CONFIG */
+  .s2-content img {
+    width: 300px;
+  }
+
+  .s2-content {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .section3 {
+    height: 100%;
+  }
+
+  .s3-content {
+    padding: 20px 0px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .s3-img-container {
+    padding-top: 20px;
     position: relative;
     right: 0%;
     top: 0;
@@ -26,9 +83,12 @@
     font-size: 50%;
   }
 
+  #back-to-top-btn img {
+    width: 13px;
+  }
+
   .section1 .monitorimg {
     width: 400px;
-
   }
 
   .s2-content {
@@ -39,9 +99,14 @@
   .s2-content img {
     width: 250px;
   }
+
+  .s3-img-container img{
+    height: 30vh;
+  }
 }
 
 @media (max-width: 630px) {
+
   .section1 .monitorimg {
     width: 300px;
   }
