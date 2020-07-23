@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 //ANCHOR Mobile Menu
 
-const menuButton = document.getElementById("mobile-Menu");
+const menuButton = document.getElementById("mobile-menu");
 
 menuButton.onclick = function() {menuFunction()};
 
@@ -24,6 +24,7 @@ function menuFunction() {
   let htmlDOM = document.getElementsByTagName("html")[0];
   let headerMenu = document.getElementById("header");
   let content = document.getElementById("menu-content");
+  let imgBtn = document.getElementById("mobile-menu");
 
   if(isMenuOpen == false){
     bodyDOM.style.overflowY = 'hidden';
@@ -34,6 +35,11 @@ function menuFunction() {
     headerMenu.style.height ='100vh';
 
     content.style.display = 'flex';
+    
+    imgBtn.classList.remove('btnExitToMenu');
+    imgBtn.classList.add('btnMenuToExit');
+
+    // imgBtn.setAttribute('src','./assets/fechar-menu.png');
 
     isMenuOpen = true;
   }
@@ -47,8 +53,15 @@ function menuFunction() {
 
     content.style.display = 'none';
 
+    imgBtn.classList.remove('btnMenuToExit');
+    imgBtn.classList.add('btnExitToMenu');
+    
+
+    // imgBtn.setAttribute('src','./assets/menu.png');
+
     isMenuOpen = false;
   }
+
 }
 
 function closeMenu(){
@@ -56,6 +69,7 @@ function closeMenu(){
   let htmlDOM = document.getElementsByTagName("html")[0];
   let headerMenu = document.getElementById("header");
   let content = document.getElementById("menu-content");
+  let imgBtn = document.getElementById("mobile-menu");
 
   bodyDOM.style.overflowY = 'initial';
   htmlDOM.style.overflowY = 'initial';
@@ -65,11 +79,28 @@ function closeMenu(){
   headerMenu.style.height ='initial';
 
   content.style.display = 'none';
+
+  imgBtn.classList.remove('btnMenuToExit');
+  imgBtn.classList.add('btnExitToMenu');
   
   isMenuOpen = false;
 }
 
+// RESIZE FIX MENU
 
+window.addEventListener("resize", fixResize);
+
+function fixResize(){
+  let w = document.documentElement.clientWidth;
+
+  if (w >= 1024) {
+    let content = document.getElementById("menu-content");
+    let headerMenu = document.getElementById("header");
+
+    content.removeAttribute('style');
+    headerMenu.removeAttribute('style');
+  }
+}
 
 const backToTopButton = document.querySelector("#back-to-top-btn");
 

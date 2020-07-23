@@ -8,6 +8,24 @@
   display: none;
 }
 
+
+@media (min-width: 1024px) {
+  /* ANCHOR PARA O MENU */
+
+  .section1 .header-menu { 
+    display: flex;
+    width: initial;
+    height: initial;
+  }
+
+  .section1 .right-menu {
+    display: flex;
+  }
+
+
+  /* ANCHOR FIM MENU */
+}
+
 @media (max-width: 1023px) {
 
   /*MENU MOBILE BUTTON */
