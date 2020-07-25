@@ -71,19 +71,21 @@ function closeMenu(){
   let content = document.getElementById("menu-content");
   let imgBtn = document.getElementById("mobile-menu");
 
-  bodyDOM.style.overflowY = 'initial';
-  htmlDOM.style.overflowY = 'initial';
+  if(document.documentElement.clientWidth <= 1024) {
+    bodyDOM.style.overflowY = 'initial';
+    htmlDOM.style.overflowY = 'initial';
 
-  headerMenu.style.display ='flex';
-  headerMenu.style.width ='initial';
-  headerMenu.style.height ='initial';
+    headerMenu.style.display ='flex';
+    headerMenu.style.width ='initial';
+    headerMenu.style.height ='initial';
 
-  content.style.display = 'none';
+    content.style.display = 'none';
 
-  imgBtn.classList.remove('btnMenuToExit');
-  imgBtn.classList.add('btnExitToMenu');
-  
-  isMenuOpen = false;
+    imgBtn.classList.remove('btnMenuToExit');
+    imgBtn.classList.add('btnExitToMenu');
+    
+    isMenuOpen = false;
+  }
 }
 
 // RESIZE FIX MENU

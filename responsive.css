@@ -8,6 +8,18 @@
   display: none;
 }
 
+@media (min-height: 882px) {
+  .section5 {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1360px) {
+  .s1-content,
+  .s2-content {
+    justify-content: space-around;
+  }
+}
 
 @media (min-width: 1024px) {
   /* ANCHOR PARA O MENU */
@@ -68,6 +80,18 @@
   }
 
   /* NORMAL CONFIG */
+
+  .s1-content,
+  .s2-content {
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .s1-content .s1-img {
+    width: 500px;
+  }
+
   .s2-content img {
     width: 300px;
   }
